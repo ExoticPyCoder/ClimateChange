@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#vertical-meter-container {
+    position: fixed;
+    right: 20px;
+    top: 20%;
+    width: 30px;
+    height: 300px;
+
+    background-color: #e0e0e0;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+#vertical-meter {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#meter-progress {
+    width: 100%;
+    height: 0%;
+    background-color: #4CAF50;
+
+    position: absolute;
+    bottom: 0;
+    transition: height 0.3s ease;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(244, 244, 244, 0.8);
+    background: url('czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvam9iNjc4LTE2OC1sMTJ4cjlseS5qcGc.webp') no-repeat center top;
+    background-size: cover;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+
+h1,
+h2 {
+    color: #0008ff;
+    text-align: center;
+    font-size: 1.5em;
+
+    margin: 10px 0;
+
+    padding-top: 10px;
+
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+#quiz-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1200px;
+    max-height: 80vh;
+    overflow-y: auto;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+
+
+div {
+    margin-bottom: 20px;
+}
+
+
+h3 {
+    color: #444;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+
+h4 {
+    font-size: 1.2em;
+    color: #666;
+
+    font-style: italic;
+    margin-bottom: 15px;
+
+}
+
+
+label {
+    font-size: 1.2em;
+    display: block;
+    padding: 10px;
+    background-color: #f0f0f0;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+
+label:hover {
+    background-color: #e0e0e0;
+}
+
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+
+button:hover {
+    background-color: #45a049;
+}
+
+
+p {
+    text-align: center;
+    font-size: 1.1em;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.correct {
+    color: green;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 255, 0, 0.6);
+}
+
+
+.incorrect {
+    color: red;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(255, 0, 0, 0.6);
+}
+
+
+#loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 80%;
+
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+#loading-text {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+#loading-bar {
+    width: 80%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+#loading-bar div {
+    width: 0%;
+    height: 100%;
+    background-color: #4CAF50;
+    position: absolute;
+    animation: loading 3s linear infinite;
+}
+
+
+@keyframes loading {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+
+    h3 {
+        font-size: 1.2em;
+    }
+
+
+    h4 {
+        font-size: 1em;
+
+    }
+
+
+    button {
+        width: 100%;
+    }
+
+
+    #loading-container {
+        width: 80%;
+    }
+
+}
